@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { breadcrumbLd, FAQS, ORGANIZATION_LD, pageMeta, SITE_URL } from "@/lib/site";
 
-const HERO_VIDEO = "public/hero-video.mp4";
+const HERO_VIDEO = "/hero-video.mp4";
 const EMAIL = "hello@musewebstudio.com";
 const CALENDAR = "https://calendar.app.google/Gz61Voaay6zF1wte8";
 const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
