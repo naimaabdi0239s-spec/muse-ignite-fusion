@@ -209,13 +209,13 @@ function Index() {
               {
                 label: "Before",
                 href: "https://techsupportforeveryone.pages.dev",
-                src: "/media/tsfe-before.png",
+                src: "/media/tsfe-before.webp",
                 alt: "Before version of the Tech Support For Everyone website",
               },
               {
                 label: "After",
                 href: "https://techsupportforeveryone.com",
-                src: "/media/tsfe-after.png",
+                src: "/media/tsfe-after.webp",
                 alt: "After version of the Tech Support For Everyone website",
               },
             ].map((p) => (
@@ -273,7 +273,7 @@ function Index() {
           >
             <div className="h-56 overflow-hidden">
               <img
-                src="/media/tsfe-after.png"
+                src="/media/tsfe-after.webp"
                 alt="Tech Support For Everyone website"
                 loading="lazy"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -294,7 +294,7 @@ function Index() {
           >
             <div className="h-56 overflow-hidden">
               <img
-                src="/media/aura.png"
+                src="/media/aura.webp"
                 alt="Aura Aesthetics website"
                 loading="lazy"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -315,7 +315,7 @@ function Index() {
           >
             <div className="h-56 overflow-hidden">
               <img
-                src="/media/medi.jpg"
+                src="/media/medi.webp"
                 alt="Med Estate website"
                 loading="lazy"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -372,7 +372,7 @@ function Index() {
           <div className="flex justify-center md:justify-end">
             <div className="w-full max-w-lg overflow-hidden rounded-xl border border-maroon/20 bg-card">
               <img
-                src="/media/aboutus.jpg"
+                src="/media/aboutus.webp"
                 alt="Designer reviewing brand work on a phone beside an iMac showing a color-system layout"
                 loading="lazy"
                 className="aspect-square h-full w-full object-cover"

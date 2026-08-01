@@ -128,7 +128,7 @@ function ProjectPage() {
         <section className="mt-10">
           <h2 className="font-display text-2xl">Services used</h2>
           <ul className="mt-3 flex flex-wrap gap-4 text-sm">
-            {p.services.map((slug) => {
+            {p.services.map((slug: string) => {
               const s = serviceBySlug(slug);
               if (!s) return null;
               return (

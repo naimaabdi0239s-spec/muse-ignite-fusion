@@ -91,7 +91,7 @@ function ServicePage() {
         <section className="mt-12">
           <h2 className="font-display text-3xl">What is included</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
-            {s.includes.map((i) => (
+            {s.includes.map((i: { h: string; p: string }) => (
               <article
                 key={i.h}
                 className="rounded-lg border border-border border-l-4 border-l-maroon bg-card p-6"
@@ -112,7 +112,7 @@ function ServicePage() {
           <section className="mt-12">
             <h2 className="font-display text-3xl">Related work</h2>
             <ul className="mt-4 space-y-2 text-sm">
-              {s.relatedProjects.map((slug) => {
+              {s.relatedProjects.map((slug: string) => {
                 const p = projectBySlug(slug);
                 if (!p) return null;
                 return (
