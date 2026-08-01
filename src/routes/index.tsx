@@ -232,21 +232,18 @@ function Index() {
                     Visit
                   </span>
                 </div>
-                <div className="h-[26rem] overflow-hidden">
-                  <img src={p.src} alt={p.alt} loading="lazy" className="auto-pan-up w-full" />
+                <div className="h-[26rem] overflow-hidden bg-ink">
+                  <img
+                    src={p.src}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="auto-pan-down block w-full"
+                  />
                 </div>
               </a>
             ))}
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
-            <a
-              href="https://techsupportforeveryone.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-coffee px-6 py-3 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-opacity hover:opacity-90"
-            >
-              Read full case study →
-            </a>
             <a
               href="https://techsupportforeveryone.com"
               target="_blank"
