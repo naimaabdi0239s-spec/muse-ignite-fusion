@@ -5,7 +5,12 @@ import { Faqs } from "@/components/Faqs";
 
 const HERO_VIDEO = "/__l5e/assets-v1/7b995bc3-43d1-4dc4-9391-6299aabc63c5/hero-studio.mp4";
 const EMAIL = "hello@musewebstudio.com";
-const MAILTO = `mailto:${EMAIL}?subject=Bring%20it%20to%20life`;
+const CALENDAR = "https://calendar.app.google/your-booking-link";
+const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  EMAIL,
+)}&su=${encodeURIComponent("Start my project with Muse")}&body=${encodeURIComponent(
+  "Hi Naima,\n\nHere is what I have in mind:\n\n- About my business:\n- What I need (website, refresh, branding):\n- Timeline:\n\nThanks!",
+)}`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
