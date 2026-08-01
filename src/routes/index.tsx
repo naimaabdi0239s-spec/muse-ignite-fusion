@@ -111,7 +111,9 @@ function Index() {
             ))}
           </nav>
           <a
-            href="#contact"
+            href={GMAIL_COMPOSE}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full border border-coffee-foreground/40 px-5 py-2 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-colors hover:bg-coffee-foreground hover:text-coffee"
           >
             Start your vision
