@@ -417,13 +417,7 @@ function Index() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a
-              href={MAILTO}
-              className="rounded-full bg-accent px-6 py-3 text-xs uppercase tracking-[0.16em] text-accent-foreground transition-opacity hover:opacity-90"
-            >
-              Bring it to life
-            </a>
-            <a
-              href="https://calendar.app.google/your-booking-link"
+              href={CALENDAR}
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-coffee-foreground/45 px-6 py-3 text-xs uppercase tracking-[0.16em] transition-colors hover:bg-coffee-foreground/10"
