@@ -148,14 +148,16 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="#contact"
+                href={GMAIL_COMPOSE}
+                target="_blank"
+                rel="noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-accent-foreground shadow-lg transition-all hover:-translate-y-0.5 hover:opacity-95"
               >
                 Start your project
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="https://calendar.app.google/your-booking-link"
+                href={CALENDAR}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-coffee-foreground/45 px-6 py-3 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-colors hover:bg-coffee-foreground/10"
