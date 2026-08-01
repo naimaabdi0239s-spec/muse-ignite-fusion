@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { WordCycle } from "@/components/WordCycle";
 import { Testimonials } from "@/components/Testimonials";
 import { Faqs } from "@/components/Faqs";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { breadcrumbLd, FAQS, ORGANIZATION_LD, pageMeta, SITE_URL } from "@/lib/site";
 
 const HERO_VIDEO = "/__l5e/assets-v1/7b995bc3-43d1-4dc4-9391-6299aabc63c5/hero-studio.mp4";
 const EMAIL = "hello@musewebstudio.com";
@@ -13,22 +16,46 @@ const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURI
 )}`;
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Muse Web Studio | Websites & Brand Design" },
-      {
-        name: "description",
-        content:
-          "Muse Web Studio designs considered websites and brand identities for independent businesses. Launch in one to two weeks.",
-      },
-      { property: "og:title", content: "Muse Web Studio | Websites & Brand Design" },
-      {
-        property: "og:description",
-        content:
-          "Considered websites and brand identities for people who care how their work is seen.",
-      },
-    ],
-  }),
+  head: () => {
+    const base = pageMeta({
+      title: "Muse Web Studio | Custom Website Design & Branding",
+      description:
+        "Muse is a one-woman creative studio offering custom website design, website redesigns, fixes and branding. Modern, responsive sites for small businesses worldwide.",
+      path: "/",
+    });
+    return {
+      ...base,
+      scripts: [
+        { type: "application/ld+json", children: JSON.stringify(ORGANIZATION_LD) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Muse Web Studio",
+            url: SITE_URL,
+            publisher: { "@id": `${SITE_URL}/#studio` },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQS.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(breadcrumbLd([{ name: "Home", path: "/" }])),
+        },
+      ],
+    };
+  },
   component: Index,
 });
 
@@ -91,35 +118,7 @@ const STEPS = [
 function Index() {
   return (
     <main>
-      <header className="absolute inset-x-0 top-0 z-40">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <a
-            href="#top"
-            className="font-display text-4xl font-semibold leading-none tracking-tight text-coffee-foreground sm:text-5xl"
-          >
-            Muse
-          </a>
-          <nav className="hidden items-center gap-8 md:flex">
-            {["Work", "Services", "About", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-xs uppercase tracking-[0.18em] text-coffee-foreground/85 transition-colors hover:text-coffee-foreground"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-          <a
-            href={GMAIL_COMPOSE}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-coffee-foreground/40 px-5 py-2 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-colors hover:bg-coffee-foreground hover:text-coffee"
-          >
-            Start your vision
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero */}
       <section id="top" className="relative min-h-[92vh] overflow-hidden bg-ink">
@@ -443,46 +442,7 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-coffee text-coffee-foreground">
-        <div className="mx-auto grid max-w-7xl items-end gap-8 px-6 py-10 md:grid-cols-2">
-          <div>
-            <p className="font-display text-[18vw] leading-[0.8] md:text-[11vw]">Muse</p>
-            <p className="mt-3 text-[0.65rem] uppercase tracking-[0.2em] text-coffee-foreground/60">
-              © 2026 Muse. All rights reserved.
-            </p>
-          </div>
-          <div className="md:text-right">
-            <h2 className="font-display text-2xl">Contact us</h2>
-            <a href={`mailto:${EMAIL}`} className="mt-2 block text-sm">
-              {EMAIL}
-            </a>
-            <div className="mt-2 flex gap-4 text-sm md:justify-end">
-              <a
-                href="https://www.instagram.com/musewebstudio/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:underline"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://www.facebook.com/musewebstudio"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:underline"
-              >
-                Facebook
-              </a>
-            </div>
-            <nav className="mt-4 flex flex-wrap gap-4 text-[0.68rem] uppercase tracking-[0.16em] text-coffee-foreground/70 md:justify-end">
-              <a href="#work">Work</a>
-              <a href="#services">Services</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
