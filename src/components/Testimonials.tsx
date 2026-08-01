@@ -29,7 +29,7 @@ export function Testimonials() {
     return () => clearInterval(id);
   }, []);
 
-  const active = TESTIMONIALS[index];
+  const active = TESTIMONIALS[index]!;
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-12 text-center">
