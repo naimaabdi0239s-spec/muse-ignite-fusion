@@ -5,7 +5,12 @@ import { Faqs } from "@/components/Faqs";
 
 const HERO_VIDEO = "/__l5e/assets-v1/7b995bc3-43d1-4dc4-9391-6299aabc63c5/hero-studio.mp4";
 const EMAIL = "hello@musewebstudio.com";
-const MAILTO = `mailto:${EMAIL}?subject=Bring%20it%20to%20life`;
+const CALENDAR = "https://calendar.app.google/your-booking-link";
+const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  EMAIL,
+)}&su=${encodeURIComponent("Start my project with Muse")}&body=${encodeURIComponent(
+  "Hi Naima,\n\nHere is what I have in mind:\n\n- About my business:\n- What I need (website, refresh, branding):\n- Timeline:\n\nThanks!",
+)}`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,7 +111,9 @@ function Index() {
             ))}
           </nav>
           <a
-            href="#contact"
+            href={GMAIL_COMPOSE}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full border border-coffee-foreground/40 px-5 py-2 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-colors hover:bg-coffee-foreground hover:text-coffee"
           >
             Start your vision
@@ -141,14 +148,16 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="#contact"
+                href={GMAIL_COMPOSE}
+                target="_blank"
+                rel="noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-accent-foreground shadow-lg transition-all hover:-translate-y-0.5 hover:opacity-95"
               >
                 Start your project
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="https://calendar.app.google/your-booking-link"
+                href={CALENDAR}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-coffee-foreground/45 px-6 py-3 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-colors hover:bg-coffee-foreground/10"
@@ -225,21 +234,18 @@ function Index() {
                     Visit
                   </span>
                 </div>
-                <div className="h-[26rem] overflow-hidden">
-                  <img src={p.src} alt={p.alt} loading="lazy" className="auto-pan-up w-full" />
+                <div className="h-[26rem] overflow-hidden bg-ink">
+                  <img
+                    src={p.src}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="auto-pan-down block w-full"
+                  />
                 </div>
               </a>
             ))}
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
-            <a
-              href="https://techsupportforeveryone.com"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-coffee px-6 py-3 text-xs uppercase tracking-[0.16em] text-coffee-foreground transition-opacity hover:opacity-90"
-            >
-              Read full case study →
-            </a>
             <a
               href="https://techsupportforeveryone.com"
               target="_blank"
@@ -332,13 +338,28 @@ function Index() {
       <section id="about" className="bg-secondary/40 py-10">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-4xl sm:text-5xl">About Us</h2>
+            <h2 className="font-display text-4xl sm:text-5xl">Meet the Founder</h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Muse is a one-woman studio built on the belief that every vision deserves to be
-              brought to life with care. I work closely with you to create something that feels true
-              to you and your brand.
+              Hi, I&apos;m Naima 👋🏽
             </p>
-            <p className="mt-3 font-display text-3xl italic">Your vision, my mission.</p>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+              The designer, developer, strategist, and creative mind behind Muse.
+            </p>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+              I&apos;m obsessed with the little things that make a brand feel right — the perfect
+              typeface, the colour that changes the whole mood, the tiny interaction you didn&apos;t
+              know you needed.
+            </p>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+              Muse is my way of bringing all of that together. I create with intention, curiosity,
+              and a genuine love for making things that feel beautiful, memorable, and uniquely
+              yours.
+            </p>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+              I&apos;m not here to build you another website. I&apos;m here to build{" "}
+              <em className="italic">your</em> website.
+            </p>
+            <p className="mt-4 font-display text-3xl italic">Your vision, my mission.</p>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeRcec-Gcn2ZdkDfO6dTEtdjNN54-_ePwjadFpEeZJGQE8Fvw/viewform?usp=publish-editor"
               target="_blank"
@@ -410,13 +431,7 @@ function Index() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a
-              href={MAILTO}
-              className="rounded-full bg-accent px-6 py-3 text-xs uppercase tracking-[0.16em] text-accent-foreground transition-opacity hover:opacity-90"
-            >
-              Bring it to life
-            </a>
-            <a
-              href="https://calendar.app.google/your-booking-link"
+              href={CALENDAR}
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-coffee-foreground/45 px-6 py-3 text-xs uppercase tracking-[0.16em] transition-colors hover:bg-coffee-foreground/10"

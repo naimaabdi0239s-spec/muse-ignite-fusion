@@ -79,7 +79,7 @@
   }
 }
 
-@keyframes muse-pan-up {
+@keyframes muse-pan-down {
   0% {
     transform: translateY(0);
   }
@@ -94,9 +94,11 @@
   }
 }
 
-@utility auto-pan-up {
-  animation: muse-pan-up 22s ease-in-out infinite;
+@utility auto-pan-down {
+  animation: muse-pan-down 26s linear infinite;
+  will-change: transform;
 }
+
 
 @keyframes muse-word {
   0% {
