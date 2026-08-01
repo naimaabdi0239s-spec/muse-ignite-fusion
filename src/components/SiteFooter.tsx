@@ -16,9 +16,7 @@ export function SiteFooter() {
           <a href={`mailto:${EMAIL}`} className="mt-2 block text-sm">
             {EMAIL}
           </a>
-          <p className="mt-1 text-[0.68rem] uppercase tracking-[0.16em] text-coffee-foreground/60">
-            A remote studio in Hargeisa, working with clients worldwide
-          </p>
+         
           <div className="mt-2 flex gap-4 text-sm md:justify-end">
             <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="hover:underline">
               Instagram
@@ -48,7 +46,7 @@ export function SiteFooter() {
               </Link>
             ))}
             <Link to="/about" className="hover:underline">
-              About Naima
+              About Us
             </Link>
             <Link to="/contact" className="hover:underline">
               Start a project
