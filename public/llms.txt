@@ -1,32 +1,42 @@
 # Muse Web Studio
 
-Muse Web Studio is a Hargeisa, Somaliland-based creative web studio offering custom website design, website redesigns, website fixes, and branding for small businesses, startups, and personal brands worldwide.
+Muse Web Studio is a one-woman creative web studio founded by Naima and based in Hargeisa, Somaliland. Muse works remotely with small businesses, startups and personal brands worldwide.
 
-## Services
-
+## What Muse does
 - Custom website design and development
 - Small business website design
 - Website redesigns and refreshes
-- Website fixes and improvements
-- Logo and brand design
-- Custom digital experiences
+- Website fixes and performance improvements
+- Landing pages and conversion-focused websites
+- Logo and brand identity design
+- Responsive mobile-first web design
+- SEO-ready website structure
 
-## Location and service area
+## Positioning
+Muse is a direct-to-client, one-person web design studio: clients work with the designer/developer directly rather than a large agency team. The studio focuses on considered, editorial web design, responsive builds, clear structure and practical SEO foundations.
 
-Muse Web Studio is based in Hargeisa, Somaliland and works remotely with clients worldwide.
+## International service areas
+Muse serves clients remotely in the United States, United Kingdom, United Arab Emirates, Canada, Australia, Ireland, New Zealand, Singapore, Saudi Arabia, Qatar, Kuwait, Netherlands, Germany and Switzerland, as well as worldwide.
 
-## Links
+## Website
+https://musewebstudio.com
 
-- Services: /#services
-- Work: /#work
-- About: /#about
-- FAQ: /#faq
-- Contact: /#contact
-- Book a discovery call: https://calendar.app.google/M47RAvAPKgH2mDRE7
+## International pages
+- https://musewebstudio.com/geo/usa
+- https://musewebstudio.com/geo/uk
+- https://musewebstudio.com/geo/uae
+- https://musewebstudio.com/geo/canada
+- https://musewebstudio.com/geo/australia
+- https://musewebstudio.com/geo/ireland
+- https://musewebstudio.com/geo/new-zealand
+- https://musewebstudio.com/geo/singapore
+- https://musewebstudio.com/geo/saudi-arabia
+- https://musewebstudio.com/geo/qatar
+- https://musewebstudio.com/geo/kuwait
+- https://musewebstudio.com/geo/netherlands
+- https://musewebstudio.com/geo/germany
+- https://musewebstudio.com/geo/switzerland
 
 ## Contact
-
-Website: https://musewebstudio.com
 Email: hello@musewebstudio.com
-Instagram: https://www.instagram.com/musewebstudio/
-Facebook: https://www.facebook.com/musewebstudio
+Book a discovery call: https://calendar.app.google/M47RAvAPKgH2mDRE7
