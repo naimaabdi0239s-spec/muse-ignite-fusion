@@ -1,6 +1,6 @@
 export const SITE_URL = "https://musewebstudio.com";
 export const EMAIL = "hello@musewebstudio.com";
-export const CALENDAR = "https://calendar.app.google/M47RAvAPKgH2mDRE7";
+export const CALENDAR = "https://calendar.app.google/mQJizzrFSB1cv6cB6";
 export const INSTAGRAM = "https://www.instagram.com/musewebstudio/";
 export const FACEBOOK = "https://www.facebook.com/musewebstudio";
 export const VISION_FORM =
