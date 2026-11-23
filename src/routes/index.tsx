@@ -8,7 +8,7 @@ import { breadcrumbLd, FAQS, ORGANIZATION_LD, pageMeta, SITE_URL } from "@/lib/s
 
 const HERO_VIDEO = "/hero-video.mp4";
 const EMAIL = "hello@musewebstudio.com";
-const CALENDAR = "https://calendar.app.google/M47RAvAPKgH2mDRE7";
+const CALENDAR = "https://calendar.app.google/mQJizzrFSB1cv6cB6";
 const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
   EMAIL,
 )}&su=${encodeURIComponent("Start my project with Muse")}&body=${encodeURIComponent(
